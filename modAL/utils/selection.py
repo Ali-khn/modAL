@@ -45,9 +45,10 @@ def multi_argmax(values: np.ndarray, n_instances: int = 1) -> np.ndarray:
         The indices of the n_instances largest values.
     """
     import numpy as np
-    print('np.array(values).shape[0] IS=',np.array(values).shape[0])
-    print('value.shape[0] IS=',values.shape[0])
+    print('np.array(values).shape IS=',np.array(values).shape)
     print('value.shape IS=',values.shape)
+    
+    #print('value.shape IS=',values.shape)
     #assert n_instances <= np.array(values).shape[0], 'n_instances must be less or equal than the size of utility'
 
     max_idx = np.argpartition(-values, n_instances-1, axis=0)[:n_instances]
